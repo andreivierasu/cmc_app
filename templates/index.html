@@ -7,5 +7,20 @@
 </head>
 <body>
     <h1>Welcome to the Home Page!</h1>
+    <ul>
+        {% for item in news %}
+            <li>
+                <h2>
+                {{ item.title }}
+                </h2>
+                <p>
+                {{ item.author }} {{ item.date }}
+                </p>
+                <p>
+                {{ item.content }}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
