@@ -1,5 +1,5 @@
 from models.news import NewsDTO
-from helpers.helpers import create_news
+from helpers.helpers import create_news, get_news
 
 class NewsCrudManager:
 
@@ -7,8 +7,8 @@ class NewsCrudManager:
         create_news(news)
         return news
 
-    def read(self, id) -> None:
-        pass
+    def read(self) -> list[NewsDTO]:
+        return get_news()
 
     def update(self) -> None:
         pass
