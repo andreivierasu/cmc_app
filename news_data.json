@@ -98,5 +98,14 @@
             "sports1.jpg",
             "sports2.jpg"
         ]
+    },
+    {
+        "title": "Ratiu accidentat",
+        "content": "S-a accidentat saracul",
+        "date": "2024-07-09T19:19",
+        "author": "Gradinescu",
+        "pictures": [
+            "https://res.sport.ro/assets/sport/2024/06/22/image_galleries/818167/andrei-ratiu-poate-ajunge-in-serie-a-clubul-l-a-remarcat-pe-statisticile-din-football-manager_5.jpg"
+        ]
     }
 ]

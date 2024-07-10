@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create News</title>
+</head>
+<body>
+    <form action="/news/create" method="post">
+        <label for="title">News Title</label>
+        <input type="text" name="title" id="title">
+        <label for="content">News Content</label>
+        <input type="text" name="content" id="content">
+        <label for="date">News Date</label>
+        <input value="new Date()" type="datetime-local" name="date" id="date">
+        <label for="author">News Author</label>
+        <input type="text" name="author" id="author">
+        <label for="pictures">Add Picture Links</label>
+        <input type="text" name="pictures" id="pictures">
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>
