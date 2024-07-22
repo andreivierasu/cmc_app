@@ -15,5 +15,7 @@
         <p>
         {{ news.content }}
         </p>
+        <a href="{{ url_for('get_news_update_form', news_id=news.news_id )}}">Update</a>
+        <a href="{{ url_for('delete_news', news_id=news.news_id) }}">Delete</a>
 </body>
 </html>
