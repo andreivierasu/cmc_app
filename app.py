@@ -31,3 +31,24 @@ def read_news():
     news_manager = NewsCrudManager()
     all_news = news_manager.read()
     return render_template("all_news.html", news=all_news)
+
+@app.route("/news/<int:news_id>/update", methods=["GET"])
+def get_news_update_form(news_id:int):
+    crud_manager = NewsCrudManager()
+    news = crud_manager.read(news_id=news_id)
+    return render_template("news_edit_form.html", news=news)
+
+@app.route("/news/<int:news_id>/update", methods=["POST"])
+def news_update(news_id:int):
+    news_id = request.form.get("news_id")
+    title = request.form.get("title")
+    content = request.form.get("content")
+    date = request.form.get("date")
+    author = request.form.get("author")
+    pictures = None
+    if request.form.get("pictures") is not None:
+        pictures = request.form.get("pictures").split(",")
+    news = NewsDTO(title, content, date, author, pictures, news_id)
+    crud_manager = NewsCrudManager()
+    updated_news = crud_manager.update(news)
+    return render_template("news_article.html", news=updated_news)

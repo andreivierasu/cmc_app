@@ -13,12 +13,9 @@
     {
         "title": "Global Market Trends",
         "content": "The global market is seeing unprecedented growth in various sectors.",
-        "date": "2024-02-20T12:30:00",
-        "author": "John Smith",
-        "pictures": [
-            "market1.jpg",
-            "market2.jpg"
-        ],
+        "date": "2024-02-20T12:30",
+        "author": "John Smith12",
+        "pictures": null,
         "news_id": 2
     },
     {
@@ -108,25 +105,5 @@
             "sports2.jpg"
         ],
         "news_id": 10
-    },
-    {
-        "title": "Ratiu accidentat",
-        "content": "S-a accidentat saracul",
-        "date": "2024-07-09T19:19",
-        "author": "Gradinescu",
-        "pictures": [
-            "https://res.sport.ro/assets/sport/2024/06/22/image_galleries/818167/andrei-ratiu-poate-ajunge-in-serie-a-clubul-l-a-remarcat-pe-statisticile-din-football-manager_5.jpg"
-        ],
-        "news_id": 11
-    },
-    {
-        "title": "asdasca",
-        "content": "12e1easd",
-        "date": "2024-07-13T12:47",
-        "author": "asdwqds",
-        "pictures": [
-            "qwdasdqwdsda"
-        ],
-        "news_id": null
     }
 ]

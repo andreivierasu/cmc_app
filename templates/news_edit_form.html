@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create News</title>
+</head>
+<body>
+    <form action="{{ url_for('get_news_update_form', news_id=news.news_id) }}" method="POST">
+        <input type="number" name="news_id" value="{{ news.news_id }}" hidden>
+        <label for="title">News Title</label>
+        <input type="text" name="title" id="title" value="{{ news.title }}">
+        <label for="content">News Content</label>
+        <input type="text" name="content" id="content" value="{{ news.content }}">
+        <label for="date">News Date</label>
+        <input value="{{ news.date }}" type="datetime-local" name="date" id="date">
+        <label for="author">News Author</label>
+        <input type="text" name="author" id="author" value="{{ news.author }}">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
