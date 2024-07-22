@@ -1,5 +1,5 @@
 from models.news import NewsDTO
-from helpers.helpers import create_news, get_news, update_news
+from helpers.helpers import create_news, get_news, update_news, delete_news
 
 class NewsCrudManager:
 
@@ -25,5 +25,5 @@ class NewsCrudManager:
         return updated_news
         
 
-    def delete(self) -> None:
-        pass
+    def delete(self,news_id: int) -> int:
+        return delete_news(news_id)

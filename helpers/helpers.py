@@ -68,4 +68,13 @@ def update_news(news: NewsDTO) -> NewsDTO|None:
     with open(os.path.join(cwd,NEWS_FILE), "w") as f:
         f.write(json.dumps(news_dict_list))
     return to_update_news
-                
+
+
+def delete_news(news_id: int) -> int:
+    all_news = get_news()
+    news_dict_list = newsdto_list_to_dict_list(all_news)
+    filtered_news_list = [element for element in news_dict_list if int(element["news_id"]) != int(news_id)]
+    cwd = os.getcwd()
+    with open(os.path.join(cwd,NEWS_FILE), "w") as f:
+        f.write(json.dumps(filtered_news_list))
+    return news_id

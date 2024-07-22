@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from helpers.helpers import get_news
 from models.news import NewsDTO
 from crud.news import NewsCrudManager
@@ -52,3 +52,9 @@ def news_update(news_id:int):
     crud_manager = NewsCrudManager()
     updated_news = crud_manager.update(news)
     return render_template("news_article.html", news=updated_news)
+
+@app.route("/news/<int:news_id>/delete")
+def delete_news(news_id: int):
+    crud_manager = NewsCrudManager()
+    crud_manager.delete(news_id)
+    return redirect(url_for("read_news"))

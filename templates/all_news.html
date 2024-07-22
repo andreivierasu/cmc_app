@@ -20,6 +20,8 @@
                 <p>
                 {{ item.content }}
                 </p>
+                <a href="{{ url_for('get_news_update_form', news_id=item.news_id )}}">Update</a>
+                <a href="{{ url_for('delete_news', news_id=item.news_id) }}">Delete</a>
             </li>
         {% endfor %}
     </ul>
